@@ -1,13 +1,18 @@
 package br.com.divisorDeContas.DivisorDeContas;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DivisorDeContasApplication {
+public class DivisorDeContasApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DivisorDeContasApplication.class, args);
 	}
 
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("teste");
+	}
 }
