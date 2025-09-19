@@ -1,7 +1,5 @@
 package br.com.divisorDeContas.DivisorDeContas.Modelos;
 
-import java.util.Set;
-
 public class Despesa {
     private String descricao;
     private String categoria;
