@@ -1,5 +1,6 @@
 package br.com.divisorDeContas.DivisorDeContas;
 
+import br.com.divisorDeContas.DivisorDeContas.Principal.Principal;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,7 @@ public class DivisorDeContasApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("teste");
+		Principal principal = new Principal();
+		principal.exibeMenu();
 	}
 }
