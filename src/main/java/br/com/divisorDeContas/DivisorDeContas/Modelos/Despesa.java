@@ -36,7 +36,7 @@ public class Despesa {
     }
 
     public String toString() {
-        return "Descrição: " + descricao + "\n" +
+        return "\nDescrição: " + descricao + "\n" +
                 "Categoria: " + categoria + "\n" +
                 "Valor: " + valor;
     }
