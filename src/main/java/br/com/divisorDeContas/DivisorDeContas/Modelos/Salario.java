@@ -10,6 +10,18 @@ public class Salario {
         this.salario = salario;
     }
 
+    public void orcamento() {
+        necessidades = salario * 0.5;
+        desejos = salario * 0.2;
+        investimentos = salario * 0.3;
+
+        System.out.println("Seu orçamento: " +
+                "\nNecessidades: " + necessidades +
+                "\nDesejos: " + desejos +
+                "\nInvestimentos: " + investimentos);
+
+    }
+
     public double getSalario() {
         return salario;
     }
