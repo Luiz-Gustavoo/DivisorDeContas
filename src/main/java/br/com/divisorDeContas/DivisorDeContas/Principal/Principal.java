@@ -14,23 +14,33 @@ public class Principal {
     public void exibeMenu() {
         System.out.println("**********GERENCIADOR DE DESPESAS**********\n");
 
-        System.out.println("Informe a descrição: ");
-        String descricaoDespesa = leitor.nextLine();
+        int finalizarFormulario = 0;
+        while(finalizarFormulario != 1) {
+            System.out.println("Informe a descrição: ");
+            String descricaoDespesa = leitor.next();
 
-        String categoriaDespesa = "";
-        while(!categoriasPermitidas.contains(categoriaDespesa)) {
-            System.out.println("Informe a categoria dentre as seguintes opções: \n" +
-                    "Necessidades \n" +
-                    "Desejos \n" +
-                    "Investimentos");
+            String categoriaDespesa = "";
+            while(!categoriasPermitidas.contains(categoriaDespesa.toLowerCase())) {
+                System.out.println("Informe a categoria dentre as seguintes opções: \n" +
+                        "Necessidades \n" +
+                        "Desejos \n" +
+                        "Investimentos");
+                categoriaDespesa = leitor.next();
 
-            categoriaDespesa = leitor.nextLine();
+            }
+
+            System.out.println("Informe o valor da despesa: ");
+            double valorDespesa = leitor.nextDouble();
+
+            Despesa despesa = new Despesa(descricaoDespesa, categoriaDespesa, valorDespesa);
+            System.out.println(despesa);
+
+            System.out.println("Deseja sair do sistema?\n" +
+                    "1 - Sim\n" +
+                    "2 - Não");
+            finalizarFormulario = leitor.nextInt();
+
         }
 
-        System.out.println("Informe o valor da despesa: ");
-        double valorDespesa = leitor.nextDouble();
-
-        Despesa despesa = new Despesa(descricaoDespesa, categoriaDespesa, valorDespesa);
-        System.out.println(despesa);
     }
 }
