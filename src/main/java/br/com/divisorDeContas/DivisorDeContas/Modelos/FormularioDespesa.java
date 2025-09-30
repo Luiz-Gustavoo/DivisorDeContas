@@ -18,9 +18,9 @@ public class FormularioDespesa {
             CategoriaDespesa categoriaDespesa = null;
             try {
                 System.out.println("Informe a categoria dentre as seguintes opções: \n" +
-                        "Necessidades \n" +
-                        "Desejos \n" +
-                        "Investimentos");
+                        "Necessidade \n" +
+                        "Desejo \n" +
+                        "Investimento");
                 String categoriaInformada = leitor.next();
                 categoriaDespesa = CategoriaDespesa.fromString(categoriaInformada);
 
