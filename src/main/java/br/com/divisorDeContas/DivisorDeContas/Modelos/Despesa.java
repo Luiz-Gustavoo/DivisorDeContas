@@ -5,9 +5,9 @@ public class Despesa {
     private String categoria;
     private double valor;
 
-    public Despesa(String descricao, String categoria, double valor) {
+    public Despesa(String descricao, CategoriaDespesa categoriaDespesa, double valor) {
         this.descricao = descricao;
-        this.categoria = categoria;
+        this.categoria = categoriaDespesa.getCategoriaDespesa();
         this.valor = valor;
     }
 
@@ -15,24 +15,12 @@ public class Despesa {
         return descricao;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
     public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
     public double getValor() {
         return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
     }
 
     public String toString() {
