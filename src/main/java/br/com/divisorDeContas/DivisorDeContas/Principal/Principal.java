@@ -8,9 +8,6 @@ import br.com.divisorDeContas.DivisorDeContas.Modelos.Salario;
 import java.util.*;
 
 public class Principal {
-    public Scanner leitor = new Scanner(System.in);
-
-
     public void exibeMenu() {
         System.out.println("**********ORÇAMENTO MENSAL**********\n");
 
