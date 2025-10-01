@@ -16,16 +16,19 @@ public class FormularioDespesa {
             descricaoDespesa = leitor.next();
 
             CategoriaDespesa categoriaDespesa = null;
-            try {
-                System.out.println("Informe a categoria dentre as seguintes opções: \n" +
-                        "Necessidade \n" +
-                        "Desejo \n" +
-                        "Investimento");
-                String categoriaInformada = leitor.next();
-                categoriaDespesa = CategoriaDespesa.fromString(categoriaInformada);
+            while(categoriaDespesa == null) {
+                try {
+                    System.out.println("Informe a categoria dentre as seguintes opções: \n" +
+                            "Necessidade \n" +
+                            "Desejo \n" +
+                            "Investimento");
+                    String categoriaInformada = leitor.next();
+                    categoriaDespesa = CategoriaDespesa.fromString(categoriaInformada);
 
-            } catch(IllegalArgumentException e ){
-                System.out.println("Houve um erro: " + e.getMessage());
+                } catch (IllegalArgumentException e) {
+                    categoriaDespesa = null;
+                    System.out.println("Houve um erro: " + e.getMessage());
+                }
             }
 
             System.out.println("Informe o valor da despesa: ");
