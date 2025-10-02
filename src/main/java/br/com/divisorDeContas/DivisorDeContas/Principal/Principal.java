@@ -49,8 +49,10 @@ public class Principal {
     private void categorizarFatura(){
         System.out.println("**********CATEGORIZAR FATURA**********\n");
 
-        CartaoDeCredito cartaoDeCredito = new CartaoDeCredito(20);
+        FormularioCartaoDeCredito formularioCartaoDeCredito = new FormularioCartaoDeCredito();
+        CartaoDeCredito cartaoDeCredito = formularioCartaoDeCredito.formularioCartao();
         cartaoDeCredito.formularioDespesa();
+        cartaoDeCredito.getListaDeDespesas();
     }
 
 }
