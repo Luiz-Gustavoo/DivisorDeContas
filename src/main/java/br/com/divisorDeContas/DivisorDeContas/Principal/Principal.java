@@ -1,9 +1,6 @@
 package br.com.divisorDeContas.DivisorDeContas.Principal;
 
-import br.com.divisorDeContas.DivisorDeContas.Modelos.Despesa;
-import br.com.divisorDeContas.DivisorDeContas.Modelos.FormularioDespesa;
-import br.com.divisorDeContas.DivisorDeContas.Modelos.FormularioSalario;
-import br.com.divisorDeContas.DivisorDeContas.Modelos.Salario;
+import br.com.divisorDeContas.DivisorDeContas.Modelos.*;
 
 import java.util.*;
 
@@ -12,7 +9,8 @@ public class Principal {
     public void exibeMenu() {
         System.out.println("Escolha a funcionalidade desejada\n" +
                 "1 - Orçamento mensal\n" +
-                "2 - Gerenciador de despesas");
+                "2 - Gerenciador de despesas\n"+
+                "3 - Categorizar fatura do cartão");
 
         Integer funcionalidade = leitor.nextInt();
 
@@ -22,6 +20,9 @@ public class Principal {
                 break;
             case 2:
                 gerenciadorDeDespesa();
+                break;
+            case 3:
+                categorizarFatura();
                 break;
             default:
                 break;
@@ -43,6 +44,13 @@ public class Principal {
         List<Despesa> listaDeDespesas = formularioDespesa.formularioDespesa();
         System.out.println("Listagem de despesas: ");
         listaDeDespesas.forEach(System.out::println);
+    }
+
+    private void categorizarFatura(){
+        System.out.println("**********CATEGORIZAR FATURA**********\n");
+
+        CartaoDeCredito cartaoDeCredito = new CartaoDeCredito(20);
+        cartaoDeCredito.formularioDespesa();
     }
 
 }
