@@ -5,7 +5,8 @@ public class FormularioCartaoDeCredito extends FormularioSalario{
 
     public CartaoDeCredito formularioCartao(){
         System.out.println("Informe o valor da fatura: ");
-        double valorFatura = leitor.nextDouble();
+        valorFatura = leitor.nextDouble();
+        leitor.nextLine();
         return new CartaoDeCredito(valorFatura);
     }
 }
