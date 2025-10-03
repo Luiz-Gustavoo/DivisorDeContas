@@ -52,7 +52,8 @@ public class Principal {
         FormularioCartaoDeCredito formularioCartaoDeCredito = new FormularioCartaoDeCredito();
         CartaoDeCredito cartaoDeCredito = formularioCartaoDeCredito.formularioCartao();
         cartaoDeCredito.formularioDespesa();
-        cartaoDeCredito.getListaDeDespesas();
+        Map<String, Double> despesaCategorizada = cartaoDeCredito.categorizarDespesas();
+        System.out.println(despesaCategorizada);
     }
 
 }
