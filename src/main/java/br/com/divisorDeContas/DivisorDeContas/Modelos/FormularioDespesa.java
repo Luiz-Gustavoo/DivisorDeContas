@@ -13,7 +13,7 @@ public class FormularioDespesa {
         int finalizarFormulario = 0;
         while(finalizarFormulario != 1) {
             System.out.println("Informe a descrição: ");
-            descricaoDespesa = leitor.next();
+            descricaoDespesa = leitor.nextLine();
 
             CategoriaDespesa categoriaDespesa = null;
             while(categoriaDespesa == null) {
@@ -22,7 +22,7 @@ public class FormularioDespesa {
                             "Necessidade \n" +
                             "Desejo \n" +
                             "Investimento");
-                    String categoriaInformada = leitor.next();
+                    String categoriaInformada = leitor.nextLine();
                     categoriaDespesa = CategoriaDespesa.fromString(categoriaInformada);
 
                 } catch (IllegalArgumentException e) {
@@ -41,6 +41,7 @@ public class FormularioDespesa {
                     "1 - Sim\n" +
                     "2 - Não");
             finalizarFormulario = leitor.nextInt();
+            leitor.nextLine();
         }
         return listaDeDespesas;
     }
